@@ -115,7 +115,36 @@ public class PuzzleMaker extends JFrame implements Runnable {
                     }
                   
  /////////////////////////////////////////////////////////////////                       
-                   
+                   if(x>=PuzzleShopPage.BuyXPos && x<=PuzzleShopPage.BuyXPos+PuzzleShopPage.BuyWidth
+                    && y>=PuzzleShopPage.BuyYPos && y<=PuzzleShopPage.BuyYPos+PuzzleShopPage.BuyLength && CalendarPage.points>=15)
+                   {
+                       CalendarPage.points-=15;
+                       PuzzleShopPage.bought1 = true;
+                   }
+                    if(x>=PuzzleShopPage.BuyXPos2 && x<=PuzzleShopPage.BuyXPos2+PuzzleShopPage.BuyWidth
+                    && y>=PuzzleShopPage.BuyYPos2 && y<=PuzzleShopPage.BuyYPos2+PuzzleShopPage.BuyLength && CalendarPage.points>=15)
+                   {
+                    CalendarPage.points-=15;
+                    PuzzleShopPage.bought2 = true;
+                   }
+                     if(x>=PuzzleShopPage.BuyXPos3 && x<=PuzzleShopPage.BuyXPos3+PuzzleShopPage.BuyWidth
+                    && y>=PuzzleShopPage.BuyYPos3 && y<=PuzzleShopPage.BuyYPos3+PuzzleShopPage.BuyLength && CalendarPage.points>=15)
+                   {
+                     CalendarPage.points-=15;
+                     PuzzleShopPage.bought3 = true;
+                   }
+                      if(x>=PuzzleShopPage.BuyXPos4 && x<=PuzzleShopPage.BuyXPos4+PuzzleShopPage.BuyWidth
+                    && y>=PuzzleShopPage.BuyYPos4 && y<=PuzzleShopPage.BuyYPos4+PuzzleShopPage.BuyLength && CalendarPage.points>=15)
+                   {
+                    CalendarPage.points-=15;
+                    PuzzleShopPage.bought4 = true;
+                   }
+                       if(x>=PuzzleShopPage.BuyXPos5 && x<=PuzzleShopPage.BuyXPos5+PuzzleShopPage.BuyWidth
+                    && y>=PuzzleShopPage.BuyYPos5 && y<=PuzzleShopPage.BuyYPos5+PuzzleShopPage.BuyLength && CalendarPage.points>=15)
+                   {
+                    CalendarPage.points-=15;
+                    PuzzleShopPage.bought5 = true;
+                   }
                    
                    
                    

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Tasks {
-    private static int totalPoints;
+    private static int totalPoints = 50;
     private String Name;
     private LocalDate DueDate;
     private boolean Completed;

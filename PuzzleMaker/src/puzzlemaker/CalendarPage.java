@@ -34,12 +34,22 @@ public class CalendarPage {
         {
             g.drawLine(Window.getX(xdelta),Window.getY(zi*ydelta),
                     Window.getX(CalWidth+xdelta),Window.getY(zi*ydelta));
+            
+            
         }
-       
+        g.setFont(new Font("Arial",Font.PLAIN,20));
+        g.setColor(Color.black);
+         g.drawString("Mon",Window.getX(2*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Tue",Window.getX(3*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Wed",Window.getX(4*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Thu",Window.getX(5*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Fri",Window.getX(6*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         
         for (int zi = 1;zi<=NUM_COLUMNS+1;zi++)
         {
             g.drawLine(Window.getX(zi*xdelta),Window.getY(ydelta),
                     Window.getX(zi*xdelta),Window.getY(CalHeight+ydelta));
+            
         }
         
        ////Back Button

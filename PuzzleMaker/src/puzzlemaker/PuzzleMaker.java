@@ -49,6 +49,11 @@ public class PuzzleMaker extends JFrame implements Runnable {
                    {
                      InstructionSwitch = false;
                    }
+                   if(x>=CalendarPage.ButtonXPos && x<=CalendarPage.ButtonXPos+CalendarPage.ButtonWidth
+                    && y>=CalendarPage.ButtonYPos && y<=CalendarPage.ButtonYPos+CalendarPage.ButtonLength)
+                   {
+                     CalendarSwitch = false;
+                   }
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     

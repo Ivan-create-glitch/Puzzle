@@ -119,7 +119,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
                    
                    
                    
-                   }
+                   
                    if(x>=CalendarPage.ButtonXPos && x<=CalendarPage.ButtonXPos+CalendarPage.ButtonWidth
                     && y>=CalendarPage.ButtonYPos && y<=CalendarPage.ButtonYPos+CalendarPage.ButtonLength)
                    {
@@ -188,11 +188,11 @@ public class PuzzleMaker extends JFrame implements Runnable {
                     int x = e.getX() - Window.getX(0);
                     int y = e.getY() - Window.getY(0);
 
-                }
+               
                 repaint();
             }
+            }
         });
-           
 
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseDragged(MouseEvent e) {
@@ -375,6 +375,6 @@ public class PuzzleMaker extends JFrame implements Runnable {
         }
         relaxer = null;
     }
-   
+
 
 }

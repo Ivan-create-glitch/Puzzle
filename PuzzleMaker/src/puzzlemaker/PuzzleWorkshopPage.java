@@ -6,15 +6,23 @@
 package puzzlemaker;
 
 import java.awt.Graphics2D;
+import java.awt.*;
 
-/**
- *
- * @author Robin of Locksley
- */
 public class PuzzleWorkshopPage {
+     static int ButtonLength = 30;
+    static int ButtonWidth = 80;
+    static int ButtonXPos = 20;
+    static int ButtonYPos = 20;
     public static void Reset() {
     }
     public static void Draw(Graphics2D g) {
-        
+         ////Back Button
+         g.setFont(new Font("Arial",Font.PLAIN,20));
+         g.setColor(Color.cyan);
+         g.fillRect(Window.getX(ButtonXPos),Window.getY(ButtonYPos),ButtonWidth,ButtonLength);
+         g.setColor(Color.black);
+         g.drawString("Back",Window.getX(35),Window.getY(43));
+         
+         
     }
 }

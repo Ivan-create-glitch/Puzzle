@@ -13,6 +13,7 @@ public class CalendarPage {
     static int ButtonWidth = 80;
     static int ButtonXPos = 20;
     static int ButtonYPos = 20;
+    static boolean active = true;
  
     static int ShopButtonXPos = 533;
     static int ShopButtonYPos = 20;

@@ -8,6 +8,7 @@ public class InstructionPage {
     static int ButtonWidth = 80;
     static int ButtonXPos = 20;
     static int ButtonYPos = 20;
+    
     public static void Reset() {
     }
     public static void Draw(Graphics2D g) {

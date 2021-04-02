@@ -17,18 +17,19 @@ public class PuzzleMaker extends JFrame implements Runnable {
     Image image;
     Graphics2D g;
 
+    
+    Image puzzleImage;
+    
     boolean CalendarSwitch = false;
     boolean InstructionSwitch = false;
-<<<<<<< Updated upstream
     boolean WorkshopSwitch = false;
     boolean ShopSwitch = false;
-=======
+
     boolean TaskSwitch = false;
     boolean CreateSwitch = false;
     boolean StartSwitch = true;
     
    
->>>>>>> Stashed changes
     
     public static void main(String[] args) {
         PuzzleMaker frame = new PuzzleMaker();
@@ -98,11 +99,12 @@ public class PuzzleMaker extends JFrame implements Runnable {
                         
                    
                    }
-<<<<<<< Updated upstream
                    if(x>=CalendarPage.ButtonXPos && x<=CalendarPage.ButtonXPos+CalendarPage.ButtonWidth
                     && y>=CalendarPage.ButtonYPos && y<=CalendarPage.ButtonYPos+CalendarPage.ButtonLength)
                    {
                      CalendarSwitch = false;
+                     StartSwitch = true;
+                     
                    }
                    if(x>=CalendarPage.BuildButtonXPos && x<=CalendarPage.BuildButtonXPos+CalendarPage.ShopButtonWidth
                     && y>=CalendarPage.BuildButtonYPos && y<=CalendarPage.BuildButtonYPos+CalendarPage.ButtonLength)
@@ -128,7 +130,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
                      WorkshopSwitch = false;
 //                     CalendarSwitch = true;
                    }
-=======
+
                    
                    
                    
@@ -159,7 +161,6 @@ public class PuzzleMaker extends JFrame implements Runnable {
                        
                    
                    
->>>>>>> Stashed changes
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     
@@ -244,18 +245,17 @@ public class PuzzleMaker extends JFrame implements Runnable {
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-<<<<<<< Updated upstream
+        if(StartSwitch)
+        g.drawImage(puzzleImage,Window.getX(0),Window.getY(0),
+                Window.getWidth2(),Window.getHeight2(),this);
        
          if(CalendarSwitch==false && InstructionSwitch==false
-            && WorkshopSwitch==false && ShopSwitch == false)
-=======
-        
+            && WorkshopSwitch==false && ShopSwitch == false && StartSwitch == false)
         if(CreateSwitch)
         { 
           CreatePage.Draw(g);
         }
          if(StartSwitch)
->>>>>>> Stashed changes
          StartPage.Draw(g);
          
            if(CalendarSwitch)
@@ -270,16 +270,13 @@ public class PuzzleMaker extends JFrame implements Runnable {
          if(InstructionSwitch && TaskSwitch==false && !CalendarSwitch)
              InstructionPage.Draw(g);
          
-<<<<<<< Updated upstream
+
          if(WorkshopSwitch)
              PuzzleWorkshopPage.Draw(g);
          
          if(ShopSwitch)
              PuzzleShopPage.Draw(g);
-=======
-         
->>>>>>> Stashed changes
-       
+
         gOld.drawImage(image, 0, 0, null);
     }
 
@@ -316,7 +313,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-
+            puzzleImage = Toolkit.getDefaultToolkit().getImage("./puzzleImage.jpg");
             reset();
 
         }

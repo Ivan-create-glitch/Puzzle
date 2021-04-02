@@ -17,7 +17,9 @@ public class PuzzleMaker extends JFrame implements Runnable {
     Image image;
     Graphics2D g;
 
-    boolean notSwitch = true;
+    boolean CalendarSwitch = false;
+    boolean InstructionSwitch = false;
+    
     public static void main(String[] args) {
         PuzzleMaker frame = new PuzzleMaker();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -35,7 +37,12 @@ public class PuzzleMaker extends JFrame implements Runnable {
                    if(x>=StartPage.ButtonXPos && x<=StartPage.ButtonXPos+StartPage.ButtonWidth
                     && y>=StartPage.ButtonYPos && y<=StartPage.ButtonYPos+StartPage.ButtonLength)
                    {
-                      notSwitch = false;
+                      CalendarSwitch = true;
+                   }
+                   if(x>=StartPage.InstructionsXPos && x<=StartPage.InstructionsXPos+StartPage.underlineLength
+                    && y<=StartPage.underlineYPos && y>=StartPage.underlineYPos-30)
+                   {
+                      InstructionSwitch = true;
                    }
                 }
                 if (e.BUTTON3 == e.getButton()) {
@@ -119,11 +126,14 @@ public class PuzzleMaker extends JFrame implements Runnable {
             return;
         }
        
-         if(notSwitch)
+         if(CalendarSwitch==false && InstructionSwitch==false)
          StartPage.Draw(g);
          
-         if(notSwitch==false)
+         if(CalendarSwitch)
              CalendarPage.Draw(g);
+         
+         if(InstructionSwitch)
+             InstructionPage.Draw(g);
        
         gOld.drawImage(image, 0, 0, null);
     }
@@ -145,7 +155,8 @@ public class PuzzleMaker extends JFrame implements Runnable {
    
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-        notSwitch = true;
+        CalendarSwitch = false;
+        InstructionSwitch = false;
        // Player.Reset();
        // Board.Reset();
     }

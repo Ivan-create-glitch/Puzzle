@@ -10,6 +10,8 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 
 public class PuzzleMaker extends JFrame implements Runnable {
@@ -47,6 +49,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
                     int y = e.getY() - Window.getY(0);
                     
                    ///////////// TaskSwitching
+///////////////////////////////////////// TaskSwitching
                    if(TaskSwitch)
                    {
                        if(x>=TaskPage.ButtonXPos && x<=TaskPage.ButtonXPos+TaskPage.ButtonWidth
@@ -61,6 +64,8 @@ public class PuzzleMaker extends JFrame implements Runnable {
                        {
                            TaskSwitch=false;
                            CreateSwitch=true;
+                           CreatePage.LetType(true);
+                           
                        }
                    }
                    
@@ -94,9 +99,25 @@ public class PuzzleMaker extends JFrame implements Runnable {
                            }
                         }
                        
-                        
+                   }
+
+////////////////////////////////////////////////////                        
+////////////////////////////////////////CreateSwitch
+                    if(CreateSwitch)
+                    {
+                        if(x>=CreatePage.ButtonXPos && x<=CreatePage.ButtonXPos+CreatePage.ButtonWidth
+                       && y>=CreatePage.ButtonYPos && y<=CreatePage.ButtonYPos+CreatePage.ButtonLength)
+                       {
+                           CreatePage.LetType(false);
+                           CreateSwitch=false;
+                           TaskSwitch=true;
+                       }
+                    }
                   
-                        
+ /////////////////////////////////////////////////////////////////                       
+                   
+                   
+                   
                    
                    }
                    if(x>=CalendarPage.ButtonXPos && x<=CalendarPage.ButtonXPos+CalendarPage.ButtonWidth
@@ -301,6 +322,9 @@ public class PuzzleMaker extends JFrame implements Runnable {
         InstructionSwitch = false;
         WorkshopSwitch = false;
         ShopSwitch = false;
+        StartSwitch=true;
+        TaskSwitch=false;
+        CreateSwitch=false;
        // Player.Reset();
        // Board.Reset();
     }
@@ -318,6 +342,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
 
         }
 
+        CreatePage.Typing();
        
     }
     public static class Drawing {

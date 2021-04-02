@@ -13,6 +13,14 @@ public class PuzzleShopPage {
     static int ButtonWidth = 80;
     static int ButtonXPos = 20;
     static int ButtonYPos = 20;
+    
+    static int numPieces1 = 9;
+     int BuyLength = 30;
+     int BuyWidth = 40;
+     int BuyXPos = 20;
+     int BuyYPos = 20;
+     List buttons[];
+
     public static void Reset() {
     }
     public static void Draw(Graphics2D g) {

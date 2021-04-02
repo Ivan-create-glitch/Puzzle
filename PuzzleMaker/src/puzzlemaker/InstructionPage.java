@@ -25,9 +25,10 @@ public class InstructionPage {
          g.drawString("pieces in the Shop and build puzzles in",Window.getX(50),Window.getY(360));
          g.drawString("the Build area. Once finished, the puzzle",Window.getX(50),Window.getY(390));
          g.drawString("will transform into the reward the student",Window.getX(50),Window.getY(420));
-         g.drawString("has earned. Points are earned by logging in",Window.getX(50),Window.getY(450));
-         g.drawString("all assignments (one point max per week)",Window.getX(50),Window.getY(480));
-         g.drawString("or for the completion of every 3 assignments.",Window.getX(50),Window.getY(510));
+         g.drawString("has earned. 5 Points are earned by logging",Window.getX(50),Window.getY(450));
+         g.drawString("in all assignments (5 point max per week)",Window.getX(50),Window.getY(480));
+         g.drawString("or for the completion of one assignment.",Window.getX(50),Window.getY(510));
+         g.drawString("Jigsaw pieces are earned every 15 points.",Window.getX(50),Window.getY(540));
          
          
          ////Back Button

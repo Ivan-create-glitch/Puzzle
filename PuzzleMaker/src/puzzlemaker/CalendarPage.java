@@ -20,6 +20,8 @@ public class CalendarPage {
     static int BuildButtonXPos = 533;
     static int BuildButtonYPos = 80;
     
+    static int points = 0;
+    
     public static void Reset() {
     }
     public static int ReturnHeight(){
@@ -33,6 +35,9 @@ public class CalendarPage {
     }
     public static int ReturnWidth(){
         return(CalWidth);
+    }
+    public static int returnPoints(){
+        return(points);
     }
             
     public static void Draw(Graphics2D g) {
@@ -55,6 +60,13 @@ public class CalendarPage {
          g.drawString("Wed",Window.getX(4*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
          g.drawString("Thu",Window.getX(5*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
          g.drawString("Fri",Window.getX(6*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
+         g.setFont(new Font("Arial",Font.PLAIN,10));
+         g.drawString("Math",Window.getX(xdelta+xdelta/4),Window.getY((int)(3*ydelta/1.04)));
+         g.drawString("English",Window.getX(xdelta+xdelta/4),Window.getY((int)(4*ydelta/1.04)));
+         g.drawString("History",Window.getX(xdelta+xdelta/4),Window.getY((int)(5*ydelta/1.04)));
+         g.drawString("PE",Window.getX(xdelta+xdelta/4),Window.getY((int)(6*ydelta/1.04)));
+         g.drawString("Science",Window.getX(xdelta+xdelta/4),Window.getY((int)(7*ydelta/1.04)));
+         g.drawString("Comp Science",Window.getX(xdelta),Window.getY((int)(8*ydelta/1.04)));
          
         for (int zi = 1;zi<=NUM_COLUMNS+1;zi++)
         {
@@ -62,6 +74,17 @@ public class CalendarPage {
                     Window.getX(zi*xdelta),Window.getY(CalHeight+ydelta));
             
         }
+        
+        
+        points = Tasks.totPoints();
+        
+       
+            
+        // points display
+        g.setFont(new Font("Arial",Font.PLAIN,20));
+         g.setColor(Color.black);
+         g.drawString("Points = " + points,Window.getWidth2()/2,Window.getY(43));
+        
         
        ////Back Button
          g.setFont(new Font("Arial",Font.PLAIN,20));

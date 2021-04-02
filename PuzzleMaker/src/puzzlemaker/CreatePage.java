@@ -25,9 +25,12 @@ public class CreatePage {
          g.setColor(Color.black);
          g.drawString("X",Window.getX(ButtonXPos+ButtonWidth/2),Window.getY(ButtonYPos+ButtonLength/2));
          
+
          
-         g.drawString("Name of Task",Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/4);
-         g.drawString(Typed,Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/4);
+         g.drawString("Name of Task:",Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/4);
+         g.drawString(Typed,Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/4+40);
+         
+         
     }
     
     

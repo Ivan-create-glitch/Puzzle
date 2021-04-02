@@ -59,6 +59,11 @@ public class TaskPage
     {
         TasksArray[adding.ReturnDay()]=adding;
     }
+    public void CheckLength()
+    {
+        if(TasksArray.length==7)
+            CalendarPage.points+=5;
+    }
     
     public static void SetTask(int day)
     {

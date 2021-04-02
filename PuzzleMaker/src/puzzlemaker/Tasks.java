@@ -5,9 +5,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Tasks {
+    private static int totalPoints;
     private String Name;
     private LocalDate DueDate;
-    private int PointsWorth;
     private boolean Completed;
     private String Description;
     
@@ -22,8 +22,13 @@ public class Tasks {
         
         if(Completed && LocalDate.now().compareTo(DueDate)==0)
         {
-            PointsWorth+=5;
+            totalPoints+=5;
         }
+        
+    }
+    
+    public static int totPoints(){
+        return(totalPoints);
     }
     
     public int ReturnDay()

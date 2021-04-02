@@ -17,6 +17,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
     Image image;
     Graphics2D g;
 
+    boolean notSwitch = true;
     public static void main(String[] args) {
         PuzzleMaker frame = new PuzzleMaker();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -31,7 +32,11 @@ public class PuzzleMaker extends JFrame implements Runnable {
                 if (e.BUTTON1 == e.getButton() ) {
                     int x = e.getX() - Window.getX(0);
                     int y = e.getY() - Window.getY(0);
-                   
+                   if(x>=StartPage.ButtonXPos && x<=StartPage.ButtonXPos+StartPage.ButtonWidth
+                    && y>=StartPage.ButtonYPos && y<=StartPage.ButtonYPos+StartPage.ButtonLength)
+                   {
+                      notSwitch = false;
+                   }
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     
@@ -114,8 +119,11 @@ public class PuzzleMaker extends JFrame implements Runnable {
             return;
         }
        
-        
+         if(notSwitch)
          StartPage.Draw(g);
+         
+         if(notSwitch==false)
+             CalendarPage.Draw(g);
        
         gOld.drawImage(image, 0, 0, null);
     }
@@ -137,6 +145,7 @@ public class PuzzleMaker extends JFrame implements Runnable {
    
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
+        notSwitch = true;
        // Player.Reset();
        // Board.Reset();
     }

@@ -21,12 +21,12 @@ public class InstructionPage {
          g.drawString("assignments into a calender, complete",Window.getX(50),Window.getY(270));
          g.drawString("them, and earn points from doing so.",Window.getX(50),Window.getY(300));
          g.drawString("These points can be used to buy puzzle",Window.getX(50),Window.getY(330));
-         g.drawString("pieces required to create different",Window.getX(50),Window.getY(360));
-         g.drawString("puzzles. Once finished, the puzzle will",Window.getX(50),Window.getY(390));
-         g.drawString("transform into the reward the student has",Window.getX(50),Window.getY(420));
-         g.drawString("earned. Points are earned by logging in all",Window.getX(50),Window.getY(450));
-         g.drawString("assignments (once point max per week) or",Window.getX(50),Window.getY(480));
-         g.drawString("for the completion of every 3 assignments.",Window.getX(50),Window.getY(510));
+         g.drawString("pieces in the Shop and build puzzles in",Window.getX(50),Window.getY(360));
+         g.drawString("the Build area. Once finished, the puzzle",Window.getX(50),Window.getY(390));
+         g.drawString("will transform into the reward the student",Window.getX(50),Window.getY(420));
+         g.drawString("has earned. Points are earned by logging in",Window.getX(50),Window.getY(450));
+         g.drawString("all assignments (one point max per week)",Window.getX(50),Window.getY(480));
+         g.drawString("or for the completion of every 3 assignments.",Window.getX(50),Window.getY(510));
          
          
          ////Back Button

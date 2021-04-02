@@ -13,6 +13,14 @@ public class CalendarPage {
     static int ButtonWidth = 80;
     static int ButtonXPos = 20;
     static int ButtonYPos = 20;
+ 
+    static int ShopButtonXPos = 533;
+    static int ShopButtonYPos = 20;
+    static int ShopButtonWidth = 60;
+    
+    static int BuildButtonXPos = 533;
+    static int BuildButtonYPos = 80;
+    
     public static void Reset() {
     }
     public static void Draw(Graphics2D g) {
@@ -39,6 +47,22 @@ public class CalendarPage {
          g.fillRect(Window.getX(ButtonXPos),Window.getY(ButtonYPos),ButtonWidth,ButtonLength);
          g.setColor(Color.black);
          g.drawString("Back",Window.getX(35),Window.getY(43));
+         
+         ////Shop Button
+         g.setFont(new Font("Arial",Font.PLAIN,20));
+         Color color1 = new Color(238,123,36);
+         g.setColor(color1);
+         g.fillRect(Window.getX(ShopButtonXPos),Window.getY(ShopButtonYPos),ShopButtonWidth,ButtonLength);
+         g.setColor(Color.black);
+         g.drawString("Shop",Window.getX(540),Window.getY(43));
+         
+         ////PuzzleBuilder Button
+         g.setFont(new Font("Arial",Font.PLAIN,20));
+         Color color2 = new Color(24,143,255);
+         g.setColor(color2);
+         g.fillRect(Window.getX(BuildButtonXPos),Window.getY(BuildButtonYPos),ShopButtonWidth,ButtonLength);
+         g.setColor(Color.black);
+         g.drawString("Build",Window.getX(540),Window.getY(100));
     
     }
 }

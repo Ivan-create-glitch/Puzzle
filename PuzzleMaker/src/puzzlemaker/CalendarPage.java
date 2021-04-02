@@ -31,17 +31,8 @@ public class CalendarPage {
             g.drawLine(Window.getX(zi*xdelta),Window.getY(0),
                     Window.getX(zi*xdelta),Window.getY(Window.getHeight2()));
         }
-        g.setColor(new Color(175,102,28));
-        for (int zrow=0;zrow<NUM_ROWS;zrow++)
-            for (int zcol=0;zcol<NUM_COLUMNS;zcol++) 
-                if(zcol % 2 == 1 && zrow % 2 == 0)
-                {
-                    g.fillRect(Window.getX(zcol*xdelta), Window.getY(zrow*ydelta), xdelta, ydelta);
-                }
-                else if(zcol % 2 == 0 && zrow % 2 == 1)
-                {
-                    g.fillRect(Window.getX((zcol)*xdelta), Window.getY(zrow*ydelta), xdelta, ydelta);
-                }
+        
+       
     
     }
 }

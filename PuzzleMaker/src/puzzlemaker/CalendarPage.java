@@ -13,8 +13,6 @@ public class CalendarPage {
     static int ButtonWidth = 80;
     static int ButtonXPos = 20;
     static int ButtonYPos = 20;
-    static boolean active = true;
- 
     static int ShopButtonXPos = 533;
     static int ShopButtonYPos = 20;
     static int ShopButtonWidth = 60;
@@ -24,6 +22,19 @@ public class CalendarPage {
     
     public static void Reset() {
     }
+    public static int ReturnHeight(){
+        return(CalHeight);
+    }
+    public static int ReturnRows(){
+        return(NUM_ROWS);
+    }
+    public static int ReturnColumns(){
+        return(NUM_COLUMNS);
+    }
+    public static int ReturnWidth(){
+        return(CalWidth);
+    }
+            
     public static void Draw(Graphics2D g) {
         int ydelta = CalHeight/NUM_ROWS;
         int xdelta = CalWidth/NUM_COLUMNS;
@@ -39,11 +50,11 @@ public class CalendarPage {
         }
         g.setFont(new Font("Arial",Font.PLAIN,20));
         g.setColor(Color.black);
-         g.drawString("Mon",Window.getX(2*xdelta),Window.getY((int)(2*ydelta/1.25)));
-         g.drawString("Tue",Window.getX(3*xdelta),Window.getY((int)(2*ydelta/1.25)));
-         g.drawString("Wed",Window.getX(4*xdelta),Window.getY((int)(2*ydelta/1.25)));
-         g.drawString("Thu",Window.getX(5*xdelta),Window.getY((int)(2*ydelta/1.25)));
-         g.drawString("Fri",Window.getX(6*xdelta),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Mon",Window.getX(2*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Tue",Window.getX(3*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Wed",Window.getX(4*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Thu",Window.getX(5*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
+         g.drawString("Fri",Window.getX(6*xdelta+xdelta/4),Window.getY((int)(2*ydelta/1.25)));
          
         for (int zi = 1;zi<=NUM_COLUMNS+1;zi++)
         {

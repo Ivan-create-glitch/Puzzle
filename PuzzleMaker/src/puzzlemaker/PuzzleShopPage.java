@@ -24,6 +24,8 @@ public class PuzzleShopPage {
          g.drawString("Back",Window.getX(35),Window.getY(43));
          
          
+         
+         
     }
     
 }

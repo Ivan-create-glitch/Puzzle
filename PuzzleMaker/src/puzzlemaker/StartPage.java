@@ -17,7 +17,7 @@ public class StartPage {
         ////Title
          g.setColor(Color.black);
          g.setFont(new Font("Arial",Font.PLAIN,50));  
-         g.drawString("Puzzle Mania!",Window.getX(140),Window.getY(120));
+         g.drawString("jigSAW puzzles",Window.getX(140),Window.getY(120));
          ////Button
          g.setFont(new Font("Arial",Font.PLAIN,30));
          g.setColor(Color.green);

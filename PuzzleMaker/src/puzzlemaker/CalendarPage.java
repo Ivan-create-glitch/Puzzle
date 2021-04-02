@@ -3,10 +3,12 @@ package puzzlemaker;
 import java.awt.*;
 
 public class CalendarPage {
-
-    private final static int NUM_ROWS = 8;
-    private final static int NUM_COLUMNS = 8;      
     
+    private static int num_classes = 6;
+    private final static int NUM_ROWS = num_classes+1;
+    private final static int NUM_COLUMNS = 6;      
+    private static int CalHeight = 400;
+    private static int CalWidth = 400;
     //    static int ButtonLength = 75;
 //    static int ButtonWidth = 180;
 //    static int ButtonXPos = 210;
@@ -15,21 +17,21 @@ public class CalendarPage {
     public static void Reset() {
     }
     public static void Draw(Graphics2D g) {
-        int ydelta = Window.getHeight2()/NUM_ROWS;
-        int xdelta = Window.getWidth2()/NUM_COLUMNS;
+        int ydelta = CalHeight/NUM_ROWS;
+        int xdelta = CalWidth/NUM_COLUMNS;
        
 //Draw the grid.        
         g.setColor(Color.black);
-        for (int zi = 1;zi<NUM_ROWS;zi++)
+        for (int zi = 1;zi<=NUM_ROWS+1;zi++)
         {
-            g.drawLine(Window.getX(0),Window.getY(zi*ydelta),
-                    Window.getX(Window.getWidth2()),Window.getY(zi*ydelta));
+            g.drawLine(Window.getX(xdelta),Window.getY(zi*ydelta),
+                    Window.getX(CalWidth+xdelta),Window.getY(zi*ydelta));
         }
        
-        for (int zi = 1;zi<NUM_COLUMNS;zi++)
+        for (int zi = 1;zi<=NUM_COLUMNS+1;zi++)
         {
-            g.drawLine(Window.getX(zi*xdelta),Window.getY(0),
-                    Window.getX(zi*xdelta),Window.getY(Window.getHeight2()));
+            g.drawLine(Window.getX(zi*xdelta),Window.getY(ydelta),
+                    Window.getX(zi*xdelta),Window.getY(CalHeight+ydelta));
         }
         
        

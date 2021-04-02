@@ -7,8 +7,8 @@ public class CalendarPage {
     private static int num_classes = 6;
     private final static int NUM_ROWS = num_classes+1;
     private final static int NUM_COLUMNS = 6;      
-    private static int CalHeight = 400;
-    private static int CalWidth = 400;
+    private static int CalHeight = 450;
+    private static int CalWidth = 450;
     //    static int ButtonLength = 75;
 //    static int ButtonWidth = 180;
 //    static int ButtonXPos = 210;

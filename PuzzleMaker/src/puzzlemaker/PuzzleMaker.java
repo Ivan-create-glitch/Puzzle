@@ -36,59 +36,50 @@ public class PuzzleMaker extends JFrame implements Runnable {
                 if (e.BUTTON1 == e.getButton() ) {
                     int x = e.getX() - Window.getX(0);
                     int y = e.getY() - Window.getY(0);
-                    //Start Game Button
                    if(x>=StartPage.ButtonXPos && x<=StartPage.ButtonXPos+StartPage.ButtonWidth
                     && y>=StartPage.ButtonYPos && y<=StartPage.ButtonYPos+StartPage.ButtonLength)
                    {
-                      
                       CalendarSwitch = true;
                    }
-                   //Instruction Button
                    if(x>=StartPage.InstructionsXPos && x<=StartPage.InstructionsXPos+StartPage.underlineLength
                     && y<=StartPage.underlineYPos && y>=StartPage.underlineYPos-30)
                    {
                       InstructionSwitch = true;
                    }
-                   //Back from Instruction
                    if(x>=InstructionPage.ButtonXPos && x<=InstructionPage.ButtonXPos+InstructionPage.ButtonWidth
                     && y>=InstructionPage.ButtonYPos && y<=InstructionPage.ButtonYPos+InstructionPage.ButtonLength)
                    {
-                     
-                     reset();
+                     InstructionSwitch = false;
                    }
-                   //Back from Calendar
                    if(x>=CalendarPage.ButtonXPos && x<=CalendarPage.ButtonXPos+CalendarPage.ButtonWidth
                     && y>=CalendarPage.ButtonYPos && y<=CalendarPage.ButtonYPos+CalendarPage.ButtonLength)
                    {
-                       System.out.println("yes");
-                     reset();
+                     CalendarSwitch = false;
                    }
-                   //Build Button
                    if(x>=CalendarPage.BuildButtonXPos && x<=CalendarPage.BuildButtonXPos+CalendarPage.ShopButtonWidth
                     && y>=CalendarPage.BuildButtonYPos && y<=CalendarPage.BuildButtonYPos+CalendarPage.ButtonLength)
                    {
                      WorkshopSwitch = true;
+                     CalendarSwitch = false;
                    }
-                   //Shop button
                    if(x>=CalendarPage.ShopButtonXPos && x<=CalendarPage.ShopButtonXPos+CalendarPage.ShopButtonWidth
                     && y>=CalendarPage.ShopButtonYPos && y<=CalendarPage.ShopButtonYPos+CalendarPage.ButtonLength)
                    {
                      ShopSwitch = true;
+                     CalendarSwitch = false;
                    }
-//                   //Back from Build
-//                   if(x>=PuzzleWorkshopPage.ButtonXPos && x<=PuzzleWorkshopPage.ButtonXPos+PuzzleWorkshopPage.ButtonWidth
-//                    && y>=PuzzleWorkshopPage.ButtonYPos && y<=PuzzleWorkshopPage.ButtonYPos+PuzzleWorkshopPage.ButtonLength)
-//                   {
-//                     // WorkshopSwitch = false;
+                   if(x>=PuzzleShopPage.ButtonXPos && x<=PuzzleShopPage.ButtonXPos+PuzzleShopPage.ButtonWidth
+                    && y>=PuzzleShopPage.ButtonYPos && y<=PuzzleShopPage.ButtonYPos+PuzzleShopPage.ButtonLength)
+                   {
+                     ShopSwitch = false;
 //                     CalendarSwitch = true;
-//                   }
-//                   //Back from Shop
-//                   if(x>=PuzzleShopPage.ButtonXPos && x<=PuzzleShopPage.ButtonXPos+PuzzleShopPage.ButtonWidth
-//                    && y>=PuzzleShopPage.ButtonYPos && y<=PuzzleShopPage.ButtonYPos+PuzzleShopPage.ButtonLength)
-//                   {
-//                    //  ShopSwitch = false;
+                   }
+                   if(x>=PuzzleWorkshopPage.ButtonXPos && x<=PuzzleWorkshopPage.ButtonXPos+PuzzleWorkshopPage.ButtonWidth
+                    && y>=PuzzleWorkshopPage.ButtonYPos && y<=PuzzleWorkshopPage.ButtonYPos+PuzzleWorkshopPage.ButtonLength)
+                   {
+                     WorkshopSwitch = false;
 //                     CalendarSwitch = true;
-//                   }
+                   }
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     
@@ -178,13 +169,15 @@ public class PuzzleMaker extends JFrame implements Runnable {
             && WorkshopSwitch==false && ShopSwitch == false)
          StartPage.Draw(g);
          
-         if(CalendarSwitch && WorkshopSwitch==false && ShopSwitch==false)
+         if(CalendarSwitch)
              CalendarPage.Draw(g);
          
          if(InstructionSwitch)
              InstructionPage.Draw(g);
+         
          if(WorkshopSwitch)
              PuzzleWorkshopPage.Draw(g);
+         
          if(ShopSwitch)
              PuzzleShopPage.Draw(g);
        

@@ -44,6 +44,11 @@ public class PuzzleMaker extends JFrame implements Runnable {
                    {
                       InstructionSwitch = true;
                    }
+                   if(x>=InstructionPage.ButtonXPos && x<=InstructionPage.ButtonXPos+InstructionPage.ButtonWidth
+                    && y>=InstructionPage.ButtonYPos && y<=InstructionPage.ButtonYPos+InstructionPage.ButtonLength)
+                   {
+                     InstructionSwitch = false;
+                   }
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     

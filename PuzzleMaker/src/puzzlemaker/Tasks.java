@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Tasks {
-    private static int totalPoints = 50;
+    private static int totalPoints;
     private String Name;
     private LocalDate DueDate;
     private boolean Completed;
@@ -22,7 +22,7 @@ public class Tasks {
         
         if(Completed && LocalDate.now().compareTo(DueDate)==0)
         {
-            totalPoints+=5;
+           CalendarPage.points+=5;
         }
         
     }

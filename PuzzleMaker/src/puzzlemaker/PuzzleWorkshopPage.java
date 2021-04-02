@@ -23,6 +23,22 @@ public class PuzzleWorkshopPage {
      int BuyXPos;
      int BuyYPos;
      
+     static int piece1Xpos=120;
+     static int piece1Ypos=0;
+     static int piece2Xpos=400;
+     static int piece2Ypos=-30;
+     static int piece3Xpos=500;
+     static int piece3Ypos=-60;
+     static int piece4Xpos=200;
+     static int piece4Ypos=0;
+     static int piece5Xpos=275;
+     static int piece5Ypos=-50;
+     static double x = 0.25;
+     static double x2 = 0.25;
+     static double x3 = 0.25;
+     static double x4 = 0.25;
+     static double x5 = 0.25;
+     
 
     public static void Reset() {
     }
@@ -52,17 +68,20 @@ public class PuzzleWorkshopPage {
                     Window.getX(zi*xdelta),Window.getY(CalHeight+ydelta));
             
         }
-        double x = 1;
+        
+        //constructs whole puzzle at corrdinates (75,65)
+        
+       
         if(PuzzleShopPage.retBought1())
-        piece1(Window.getX(75),Window.getY(65),0,x,x,g);
+        piece1(Window.getX(piece1Xpos),Window.getY(piece1Ypos),0,x,x,g);
         if(PuzzleShopPage.retBought2())
-         piece2(Window.getX(75),Window.getY(65),0,x,x,g);
+         piece2(Window.getX(piece2Xpos),Window.getY(piece2Ypos),0,x2,x2,g);
         if(PuzzleShopPage.retBought3())
-         piece3(Window.getX(75),Window.getY(65),0,x,x,g);
+         piece3(Window.getX(piece3Xpos),Window.getY(piece3Ypos),0,x3,x3,g);
         if(PuzzleShopPage.retBought4())
-         piece4(Window.getX(75),Window.getY(65),0,x,x,g);
+         piece4(Window.getX(piece4Xpos),Window.getY(piece4Ypos),0,x4,x4,g);
         if(PuzzleShopPage.retBought5())
-         piece5(Window.getX(75),Window.getY(65),0,x,x,g);
+         piece5(Window.getX(piece5Xpos),Window.getY(piece5Ypos),0,x5,x5,g);
          
     }
     

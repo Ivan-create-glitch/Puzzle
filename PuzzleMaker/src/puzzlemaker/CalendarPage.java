@@ -76,7 +76,7 @@ public class CalendarPage {
         }
         
         
-        points = Tasks.totPoints();
+        
         
        
             

@@ -225,7 +225,45 @@ public class PuzzleMaker extends JFrame implements Runnable {
 
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseDragged(MouseEvent e) {
-
+          int x = e.getX() - Window.getX(0);
+          int y = e.getY() - Window.getY(0);
+                    
+                    if(x>=PuzzleWorkshopPage.piece1Xpos && x<=PuzzleWorkshopPage.piece1Xpos+150
+                         && y>=PuzzleWorkshopPage.piece1Ypos && y<=PuzzleWorkshopPage.piece1Ypos+200)
+                    {
+                        PuzzleWorkshopPage.x=1;
+                        PuzzleWorkshopPage.piece1Xpos=75;
+                        PuzzleWorkshopPage.piece1Ypos=65;
+                    }
+                    if(x>=PuzzleWorkshopPage.piece2Xpos && x<=PuzzleWorkshopPage.piece2Xpos+150
+                         && y>=PuzzleWorkshopPage.piece2Ypos && y<=PuzzleWorkshopPage.piece2Ypos+200)
+                    {
+                        PuzzleWorkshopPage.x2=1;
+                        PuzzleWorkshopPage.piece2Xpos=75;
+                        PuzzleWorkshopPage.piece2Ypos=65;
+                    }
+                    if(x>=PuzzleWorkshopPage.piece3Xpos && x<=PuzzleWorkshopPage.piece3Xpos+150
+                         && y>=PuzzleWorkshopPage.piece3Ypos && y<=PuzzleWorkshopPage.piece3Ypos+200)
+                    {
+                        PuzzleWorkshopPage.x3=1;
+                        PuzzleWorkshopPage.piece3Xpos=75;
+                        PuzzleWorkshopPage.piece3Ypos=65;
+                    }
+                    if(x>=PuzzleWorkshopPage.piece4Xpos && x<=PuzzleWorkshopPage.piece4Xpos+150
+                         && y>=PuzzleWorkshopPage.piece4Ypos && y<=PuzzleWorkshopPage.piece4Ypos+200)
+                    {
+                        PuzzleWorkshopPage.x4=1;
+                        PuzzleWorkshopPage.piece4Xpos=75;
+                        PuzzleWorkshopPage.piece4Ypos=65;
+                    }
+                    if(x>=PuzzleWorkshopPage.piece5Xpos && x<=PuzzleWorkshopPage.piece5Xpos+150
+                         && y>=PuzzleWorkshopPage.piece5Ypos && y<=PuzzleWorkshopPage.piece5Ypos+200)
+                    {
+                        PuzzleWorkshopPage.x5=1;
+                        PuzzleWorkshopPage.piece5Xpos=75;
+                        PuzzleWorkshopPage.piece5Ypos=65;
+                    }
+                    
         repaint();
       }
     });

@@ -25,6 +25,8 @@ public class CreatePage
      private static boolean TypeDate=false;
       private static boolean TypeDescription=false;
     private static String Typed="";
+     private static String TypedDate="";
+      private static String TypedDesc="";
     
     public static void Draw(Graphics2D g)
     {
@@ -58,7 +60,9 @@ public class CreatePage
          g.drawString("Type Description of Task",Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/4);
          
          g.drawString(Typed,Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/2);
-    }
+         g.drawString(TypedDate,Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/2+30);
+         g.drawString(TypedDesc,Window.WINDOW_WIDTH/3+30,Window.WINDOW_HEIGHT/2+60);
+             }
     
     
     public static void LetType(boolean set)
@@ -76,6 +80,10 @@ public class CreatePage
     
     if(TypeName)
     {
+       Typed = "";
+         TypedDate = "";
+         TypedDesc = "";
+
     Typed = myObj.nextLine();  // Read user input 
     TypeDate=true;
     TypeName=false;
@@ -84,6 +92,7 @@ public class CreatePage
     
     if(TypeDate)
     {
+        System.out.println("Due Date:");
      Typed = myObj.nextLine();  // Read user input   
      TypeDescription=true;
      TypeDate=false;
@@ -91,6 +100,8 @@ public class CreatePage
     
     if(TypeDescription)
     {        
+         CalendarPage.points+=5;
+        System.out.println("Extra details");
       Typed = myObj.nextLine();  // Read user input  
       TypeDescription=false;
     }
